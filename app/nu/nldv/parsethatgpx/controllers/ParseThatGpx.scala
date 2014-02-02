@@ -12,7 +12,7 @@ import org.joda.time.format.DateTimeFormat
  * Date: 2014-01-28
  * Time: 21:27
  */
-class ParseThatGpx {
+object ParseThatGpx {
 
   private val pattern = DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss'Z'")
 

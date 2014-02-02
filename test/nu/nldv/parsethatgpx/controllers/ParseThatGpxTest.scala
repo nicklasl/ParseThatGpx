@@ -27,12 +27,11 @@ class ParseThatGpxTest extends Specification {
   }
 
   "ParseThatGpx" should {
-    val parser = new ParseThatGpx
 
     "Test API" in new WithApplication {
 
       val file = loadFile
-      private val gpx: Gpx = parser.parse(file)
+      private val gpx: Gpx = ParseThatGpx.parse(file)
       gpx.version must beEqualTo("1.1")
       gpx.track.name must beEqualTo("Cross-Country Skiing 2/13/11 10:26 am")
       gpx.track.segments.size must beEqualTo(2)
@@ -42,7 +41,7 @@ class ParseThatGpxTest extends Specification {
 
     "Test json" in new WithApplication {
       val file = loadFile
-      private val gpx: Gpx = parser.parse(file)
+      private val gpx: Gpx = ParseThatGpx.parse(file)
       val json = Json.toJson(gpx)
       json must beAnInstanceOf[JsValue]
     }
