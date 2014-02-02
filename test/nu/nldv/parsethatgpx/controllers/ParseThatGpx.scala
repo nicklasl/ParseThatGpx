@@ -1,4 +1,4 @@
-package controllers
+package nu.nldv.parsethatgpx.controllers
 
 import java.io.File
 import scala.xml.{Node, NodeSeq, XML}

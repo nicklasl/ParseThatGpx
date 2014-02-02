@@ -1,4 +1,4 @@
-package controllers
+package nu.nldv.parsethatgpx.controllers
 
 import org.specs2.mutable.Specification
 import org.junit.runner.RunWith
