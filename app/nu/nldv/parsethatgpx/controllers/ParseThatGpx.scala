@@ -2,9 +2,9 @@ package nu.nldv.parsethatgpx.controllers
 
 import java.io.File
 import scala.xml.{Node, NodeSeq, XML}
-import model.{Point, Segment, Track, Gpx}
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
+import nu.nldv.parsethatgpx.model.{Gpx, Track, Segment, Point}
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,9 +18,7 @@ object ParseThatGpx {
 
   private def point(node: Node): Point = Point((node \ "@lat").text.toDouble, (node \ "@lon").text.toDouble, (node \\ "ele").text.toDouble, dateTime(node \\ "time"))
 
-  private def dateTime(node: NodeSeq): DateTime = {
-    DateTime.parse(node.text, pattern)
-  }
+  private def dateTime(node: NodeSeq): DateTime = DateTime.parse(node.text, pattern)
 
   private def points(nodes: NodeSeq): List[Point] = nodes.map {
     node =>

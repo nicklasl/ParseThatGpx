@@ -7,8 +7,8 @@ import play.api.Play
 import play.api.Play.current
 import java.io.File
 import play.api.test.WithApplication
-import model.Gpx
 import play.api.libs.json.{JsValue, Json}
+import nu.nldv.parsethatgpx.model.Gpx
 
 /**
  * Created with IntelliJ IDEA.

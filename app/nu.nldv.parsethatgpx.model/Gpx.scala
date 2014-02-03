@@ -1,4 +1,4 @@
-package model
+package nu.nldv.parsethatgpx.model
 
 import play.api.libs.json.Json
 
